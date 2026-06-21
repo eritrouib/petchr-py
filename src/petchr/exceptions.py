@@ -1,7 +1,7 @@
 class PetchrError(Exception):
     """Base exception for petchr."""
 
-    def __init__(self, message: str, status_code: int | None = None, response=None, attempt: int | None = None):
+    def __init__(self, message: str, status_code=None, response=None, attempt=None):
         super().__init__(message)
         self.status_code = status_code
         self.response = response
